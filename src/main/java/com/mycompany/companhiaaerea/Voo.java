@@ -19,6 +19,10 @@ public class Voo {
         this.reservas = new ArrayList<>();
     }
 
+    public Voo() {
+        
+    }
+
     public String getOrigem() {
         return origem;
     }

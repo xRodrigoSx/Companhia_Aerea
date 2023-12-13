@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 class ReservaTest {
         Voo voo = new Voo();
-        Reserva reserva = new Reserva();
+        Reserva reserva = new Reserva(3);
         
         @Test
     public void testValidarReservaComDadosValidos() {
@@ -26,14 +26,12 @@ class ReservaTest {
 
     @Test
     void testConfirmarReserva() {
-        Reserva reserva = new Reserva(3);
         voo.confirmarReserva(reserva);
         assertEquals("Confirmada", reserva.status);
     }
 
     @Test
     void testCancelarReserva() {
-        Reserva reserva = new Reserva(3);
         voo.realizarRezerva(3);
         assertEquals(47, voo.getNumeroAssentosDisponiveis());
 
